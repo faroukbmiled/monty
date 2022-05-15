@@ -18,6 +18,9 @@ void (*get_op_func(line_t line, global_t *global))(stack_t **, unsigned int)
 		{"pop", pop},
 		{"swap", swap},
 		{"nop", nop},
+		{"sub", sub},
+		{"mul", mul},
+		{"add", add},
 		{NULL, NULL}
 	};
 

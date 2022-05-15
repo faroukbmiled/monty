@@ -91,3 +91,30 @@ void nop(stack_t **stack, unsigned int number_line)
 	(void) stack;
 	(void) number_line;
 }
+
+/**
+ * add - add 2 tops elements of the stack
+ * @stack:  the top of the stack
+ * @number_line: number of the monty file to execute
+ * Return: void
+ */
+
+void add(stack_t **stack, __attribute__((unused))unsigned int number_line)
+{
+	int result;
+	stack_t *temp4;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n",
+			number_line);
+		exit(EXIT_FAILURE);
+	}
+
+	temp4 = *stack;
+	(*stack) = (*stack)->next;
+	result = (*stack)->n + temp4->n;
+	(*stack)->n = result;
+
+	free(temp4);
+}
