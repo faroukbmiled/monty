@@ -3,7 +3,7 @@
 arg_t argument = {0};
 
 /**
- * check_argument - check the argument of the push function
+ * check_arg - check the argument of the push function
  * @str: ...
  * Return: int 0 or 1
  */
