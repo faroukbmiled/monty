@@ -86,11 +86,9 @@ void swap(stack_t **stack, unsigned int number_line)
  * @number_line: number of the monty file to execute
  * Return: void
  */
-void nop(stack_t **stack, unsigned int number_line)
-{
-	(void) stack;
-	(void) number_line;
-}
+void nop(__attribute__((unused)) stack_t **stack,
+			__attribute__((unused)) unsigned int line_number)
+{}
 
 /**
  * add - add 2 tops elements of the stack
